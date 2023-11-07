@@ -1,0 +1,423 @@
+/*fonts */
+@font-face {
+  font-family: "Brooklyn";
+  src: url("/css/fonts/Brooklyn.ttf"),
+    url("/css/fonts/Brooklyn.otf") format("otf");
+}
+@font-face {
+  font-family: "ArkibalDisplay";
+  src: url("/css/fonts/ArkibalDisplayItalic.ttf")
+    url("/css/fonts/ArkibalDisplayMediumItalic.ttf");
+}
+/*color and font variable */
+:root {
+  --primary-color: #ff6635;
+  --text-color: #000;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f6f6f6;
+  font-family: "roboto" sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+
+/*------------ modal------------- */
+.modal {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  text-align: center;
+  position: relative;
+  margin: 10% auto;
+}
+.modal-body {
+  display: flex;
+  flex-direction: row;
+}
+/* ------- modal item left ------- */
+
+.modal-item-left {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  padding-bottom: 70px;
+}
+.main-content {
+  width: 50%;
+  box-sizing: border-box;
+  margin-top: 15%;
+}
+.lg-text {
+  font-size: 1.4vw;
+  color: var(--text-color);
+  font-family: "ArkibalDisplay", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.pay-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10%;
+  grid-gap: 5%;
+}
+.btn {
+  width: 100%;
+  height: 5vh;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid #eee;
+  border-radius: 0.55rem;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.pay-button a img {
+  width: 65%;
+}
+.form-content {
+  width: 80%;
+  margin-left: 8%;
+  margin-right: 12%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+}
+.form-group {
+  margin-top: 30px;
+}
+.form label {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 35px;
+  text-align: left !important;
+  font-weight: 600;
+  font-family: "ArkibalDisplay", sans-serif;
+}
+.form-control {
+  width: 100%;
+  padding: 20px 30px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 23px;
+  outline: none;
+  height: 65px;
+}
+.half-div {
+  display: flex;
+  justify-content: space-between;
+}
+.half-div div:first-child {
+  width: 48%;
+}
+.half-div div:last-child {
+  width: 48%;
+}
+.btn-md {
+  background: var(--primary-color);
+  color: var(--white-color);
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 35px;
+  border-radius: 0.55rem;
+  text-transform: uppercase;
+  font-family: "ArkibalDisplay", sans-serif;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 2% 15%;
+  margin-top: 50px;
+}
+.button-lg {
+  text-align: right;
+}
+.btn-img {
+  width: 30%;
+  border: none;
+  background: transparent;
+  margin-right: -1%;
+}
+.btn-img img {
+  width: 100%;
+}
+/* -------- modal item right -------- */
+.modal-item-right {
+  width: 35%;
+  position: relative;
+}
+.modal-item-right img {
+  height: 100%;
+  width: 100%;
+}
+.modal-item-right .btn-cross {
+  background: transparent;
+  border: 0px;
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+/*Footer section*/
+footer {
+  background-color: #181818;
+  font-family: "ArkibalDisplay", sans-serif;
+}
+.top-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: top;
+  gap: 20px;
+  padding: 50px 0;
+}
+footer a,
+p,
+h6 {
+  color: #fff !important;
+}
+.f-section1 {
+  flex-shrink: 2;
+}
+.f-section2,
+.f-section3,
+.f-section4 {
+  flex-shrink: 1;
+}
+.f-section1 img {
+  width: 200px;
+}
+.f-section2 ul {
+  padding: 0;
+  list-style: none;
+}
+.f-section2 ul li {
+  padding: 5px 5px 5px 0;
+}
+.t-f-mobile {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+.f-contact img {
+  width: 16px;
+}
+.bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.bottom-footer a {
+  text-decoration: none;
+}
+/* ---------main content------------- */
+
+/* -----------tablet responsive---------- */
+@media screen and (min-width: 769px) {
+  .modal-top {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}
+
+/*responsive for mobile*/
+@media screen and (max-width: 768px) {
+  .modal {
+    background: none;
+    display: block;
+    position: inherit;
+  }
+  .modal-content {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .modal-body {
+    flex-direction: column;
+  }
+  .modal-top {
+    background: url("../img/Marni\ for\ mobile.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 530px;
+    object-fit: cover;
+  }
+  .modal-top img {
+    padding: 10px;
+  }
+  .modal-item-left {
+    width: 100%;
+    padding: 30px;
+    display: block;
+    padding-bottom: 400px;
+  }
+  .main-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 10px;
+  }
+  .modal-item-right {
+    width: 0;
+  }
+  .modal-item-right .btn-cross {
+    display: none;
+  }
+  .lg-text {
+    font-size: 4.2vw;
+  }
+  .btn {
+    height: 10vh;
+  }
+  .form-content {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form label {
+    font-size: 3.5vw;
+  }
+  .form-control {
+    font-size: 3.5vw;
+  }
+  .button-lg {
+    text-align: center;
+  }
+  .btn-md {
+    width: 100%;
+  }
+}
+/* ----- footer ------ */
+@media (max-width: 768px) {
+  .top-footer {
+    flex-wrap: wrap;
+    padding: 50px 20px;
+  }
+  .f-section1 {
+    width: 100%;
+  }
+  .f-section1 p {
+    font-size: 3.5vw;
+    width: 90%;
+    line-height: 1.5em;
+    margin-bottom: 45px;
+    margin-top: 30px;
+  }
+  .f-section2 h6,
+  .f-section3 h6,
+  .f-section4 h6 {
+    font-size: 3.5vw;
+    font-style: italic;
+    margin: 0px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .f-section2 ul li a {
+    text-decoration: none;
+    color: var(--primary-color) !important;
+    line-height: 20px;
+  }
+  .t-f-mobile {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .f-contact {
+    padding-top: 5px;
+    margin-bottom: 40px;
+  }
+  .email a {
+    display: flex;
+    gap: 15px;
+    color: var(--primary-color) !important;
+  }
+  .f-section3 h6 {
+    color: var(--primary-color) !important;
+  }
+  .social-link {
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #b-footer {
+    border-top: 1px solid #434343;
+    padding-bottom: 25px;
+  }
+  .bottom-footer {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .t-f-mobile {
+    width: 49%;
+  }
+  .f-contact span {
+    font-size: 11px;
+  }
+  .bottom-footer {
+    align-items: normal;
+  }
+}
+
+/*for desk top*/
+/* -----------mobile m responsive---------------- */
+@media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 368px) {
+}
+
+@media screen and (max-width: 320px) {
+}
